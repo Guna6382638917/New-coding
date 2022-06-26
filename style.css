@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #444;
+}
+
+/* STRUCTURE */
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+h2 {
+  /* display: flex; */
+  /* justify-content: end; */
+  margin-bottom: 15px;
+  background: aquamarine;
+  border: solid 2px;
+  margin-top: -7px;
+  margin-left: 170px;
+  text-align: center;
+  margin-right: -7px;
+}
+
+body > div > section > div:nth-child(2) > h2 {
+  background: chocolate;
+  color: white;
+  border-color: black;
+}
+
+body > div > section > div:nth-child(3) > h2 {
+  background: beige;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  
+  margin: 5px;
+}
+
+.column {
+  flex: 1;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+
+.column:first-child {
+  margin-left: 0;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+/*  Media Query For Tablet or Ipad Screen view START */
+@media screen and (max-width: 980px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+  .columns .column:nth-last-child(2) {
+    margin-right: 0;
+  }
+  .columns .column:last-child {
+/* flex-basis: 100%;*/
+    margin: 0;
+  }
+   
+
+  body > div > section > div:nth-child(3) > h2 {
+    max-width: 170px;
+    margin-left: auto;
+}
+
+}
+/* END */
+
+
+/* Media Query for Mobile Screen START */
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+ /*END */
